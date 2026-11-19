@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package task;
+
+service TaskProcessor {
+  rpc ProcessJob (JobRequest) returns (JobResponse);
+}
+
+message JobRequest {
+  string job_id = 1;
+  string payload = 2;
+}
+
+message JobResponse {
+  string job_id = 1;
+  string status = 2;
+  string processed_by = 3;
+}
+

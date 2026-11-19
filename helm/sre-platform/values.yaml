@@ -1,0 +1,7 @@
+worker:
+  replicas: 2
+  image: sre-worker:v1
+gateway:
+  replicas: 2
+  image: sre-gateway:v1
+
